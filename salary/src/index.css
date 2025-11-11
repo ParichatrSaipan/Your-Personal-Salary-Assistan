@@ -1,68 +1,63 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+/* Minimal stylesheet: only background rules
+   Keeps only the essentials so the page shows the full-viewport background image.
+   The image path is relative to this CSS file: ./assets/BG_2.png
+*/
+
+/*
+  Familjen Grotesk usage
+  - Place your font files under: src/assets/fonts/
+    Recommended filenames (adjust if yours differ):
+      - FamiljenGrotesk-Regular.woff2
+      - FamiljenGrotesk-Medium.woff2
+      - FamiljenGrotesk-SemiBold.woff2
+  If you have a variable woff2, you can include it as well.
+  This @font-face uses local fallback and woff2 (best for modern browsers).
+*/
+@font-face {
+  font-family: 'Familjen Grotesk';
+  src: local('Familjen Grotesk'),
+       url('./assets/fonts/FamiljenGrotesk-Regular.woff2') format('woff2');
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-display: swap;
 }
-
-a {
+@font-face {
+  font-family: 'Familjen Grotesk';
+  src: local('Familjen Grotesk Medium'),
+       url('./assets/fonts/FamiljenGrotesk-Medium.woff2') format('woff2');
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-style: normal;
+  font-display: swap;
 }
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: 'Familjen Grotesk';
+  src: local('Familjen Grotesk SemiBold'),
+       url('./assets/fonts/FamiljenGrotesk-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  /* Use Familjen Grotesk as the primary UI font when available */
+  --ui-font: 'Familjen Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* background image (fallback to BG_2.png currently present in src/assets) */
+  background-image: url("./assets/BG_2.png");
+  background-size: cover; /* scale to cover entire viewport */
+  background-position: center center;
+  background-repeat: no-repeat;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* A fallback background-color in case the image fails to load */
+  background-color: #000;
+  /* Use the UI font variable – Familjen Grotesk if available */
+  font-family: var(--ui-font);
 }

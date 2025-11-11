@@ -1,0 +1,13 @@
+{
+  "name": "Your-Personal-Salary-Assistan",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix ./salary run dev",
+    "build": "npm --prefix ./salary run build",
+    "preview": "npm --prefix ./salary run preview",
+    "lint": "npm --prefix ./salary run lint",
+    "install-salary": "npm --prefix ./salary install",
+    "install": "npm --prefix ./salary install"
+  }
+}
