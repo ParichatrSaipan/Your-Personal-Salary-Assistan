@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Start from './Start'
+import Submitted from './Submitted'
 
 function App() {
   const [count] = useState(0)
@@ -9,6 +10,10 @@ function App() {
   const path = typeof window !== 'undefined' ? window.location.pathname : '/'
   if (path === '/start' || path.startsWith('/start')) {
     return <Start />
+  }
+
+  if (path === '/submitted' || path.startsWith('/submitted')) {
+    return <Submitted />
   }
 
   return (
