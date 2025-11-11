@@ -81,16 +81,26 @@ export default function Start() {
           <label className="field-label">Job title or position name</label>
           <select className="text-input" name="jobTitle" value={formData.jobTitle} onChange={handleChange}>
             <option value="">Select a job title</option>
-            <option value="Data Scientist">Data Scientist</option>
-            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
-            <option value="Data Analyst">Data Analyst</option>
-            <option value="AI Engineer">AI Engineer</option>
-            <option value="Research Scientist">Research Scientist</option>
-            <option value="Data Engineer">Data Engineer</option>
-            <option value="Business Intelligence Analyst">Business Intelligence Analyst</option>
-            <option value="AI Researcher">AI Researcher</option>
-            <option value="Deep Learning Engineer">Deep Learning Engineer</option>
+            <option value="AI Architect">AI Architect</option>
+            <option value="AI Consultant">AI Consultant</option>
+            <option value="AI Product Manager">AI Product Manager</option>
+            <option value="AI Research Scientist">AI Research Scientist</option>
+            <option value="AI Software Engineer">AI Software Engineer</option>
+            <option value="AI Specialist">AI Specialist</option>
+            <option value="Autonomous Systems Engineer">Autonomous Systems Engineer</option>
             <option value="Computer Vision Engineer">Computer Vision Engineer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Data Engineer">Data Engineer</option>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Deep Learning Engineer">Deep Learning Engineer</option>
+            <option value="Head of AI">Head of AI</option>
+            <option value="ML Ops Engineer">ML Ops Engineer</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+            <option value="Machine Learning Researcher">Machine Learning Researcher</option>
+            <option value="NLP Engineer">NLP Engineer</option>
+            <option value="Principal Data Scientist">Principal Data Scientist</option>
+            <option value="Research Scientist">Research Scientist</option>
+            <option value="Robotics Engineer">Robotics Engineer</option>
           </select>
 
           <label className="field-label">Level of experience</label>
@@ -141,37 +151,46 @@ export default function Start() {
           <label className="field-label">Country where the company is located</label>
           <select className="text-input" name="country" value={formData.country} onChange={handleChange}>
             <option value="">Select a country</option>
-            <option value="United States">United States</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="Canada">Canada</option>
-            <option value="Germany">Germany</option>
-            <option value="Switzerland">Switzerland</option>
-            <option value="France">France</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="Spain">Spain</option>
-            <option value="India">India</option>
-            <option value="Singapore">Singapore</option>
             <option value="Australia">Australia</option>
+            <option value="Austria">Austria</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
             <option value="Denmark">Denmark</option>
-            <option value="Norway">Norway</option>
-            <option value="Sweden">Sweden</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="India">India</option>
+            <option value="Ireland">Ireland</option>
+            <option value="Israel">Israel</option>
             <option value="Japan">Japan</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Norway">Norway</option>
+            <option value="Singapore">Singapore</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
           </select>
 
           <label className="field-label">Industry sector of the company</label>
           <select className="text-input" name="industry" value={formData.industry} onChange={handleChange}>
             <option value="">Select an industry</option>
-            <option value="Technology">Technology</option>
-            <option value="Finance">Finance</option>
-            <option value="Healthcare">Healthcare</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Consulting">Consulting</option>
-            <option value="Manufacturing">Manufacturing</option>
-            <option value="Education">Education</option>
-            <option value="Retail">Retail</option>
-            <option value="Telecommunications">Telecommunications</option>
             <option value="Automotive">Automotive</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Education">Education</option>
+            <option value="Energy">Energy</option>
+            <option value="Finance">Finance</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Government">Government</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Manufacturing">Manufacturing</option>
             <option value="Media">Media</option>
+            <option value="Real Estate">Real Estate</option>
+            <option value="Retail">Retail</option>
+            <option value="Technology">Technology</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="Transportation">Transportation</option>
           </select>
 
           <label className="field-label">Required education level</label>
