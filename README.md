@@ -1,4 +1,4 @@
-# Your Personal Salary Assistant WebApp
+#  Data Analytics Project: Your Personal Salary Assistant WebApp
 
 A full-stack web application that predicts salaries based on job characteristics using machine learning. This project is based on [data_analytics_project](https://github.com/ParichatrSaipan/data_analytics_project.git)
 
