@@ -45,9 +45,8 @@ export default function Start() {
     setError('')
 
     try {
-      // Call the API
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://your-personal-salary-assistan-zyf1.vercel.app'
-      const response = await fetch(`${apiUrl}/api/predict`, {
+      // Call the API (relative path works since frontend and backend are on same domain)
+      const response = await fetch('/api/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
