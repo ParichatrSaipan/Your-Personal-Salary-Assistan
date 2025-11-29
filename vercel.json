@@ -3,13 +3,11 @@
   "outputDirectory": "salary/dist",
   "installCommand": "npm install --prefix ./salary",
   "devCommand": "cd salary && npm run dev",
-  "functions": {
-    "backend/app.py": {
-      "runtime": "python3.9"
-    }
-  },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/backend/app.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/api/(.*)", "destination": "/backend/app.py" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/app.py" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
