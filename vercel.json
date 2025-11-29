@@ -4,7 +4,7 @@
     {
       "src": "salary/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": { "distDir": "salary/dist" }
     },
     {
       "src": "backend/app.py",
@@ -14,7 +14,7 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "/backend/app.py" },
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/dist/$1" },
-    { "src": "/.*", "dest": "/dist/index.html" }
+    { "src": "/(.*)", "dest": "/salary/dist/$1" },
+    { "src": "/.*", "dest": "/salary/dist/index.html" }
   ]
 }
