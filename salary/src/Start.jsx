@@ -46,7 +46,7 @@ export default function Start() {
 
     try {
       // Call the API
-      const response = await fetch('http://localhost:8000/api/predict', {
+      const response = await fetch('/api/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
