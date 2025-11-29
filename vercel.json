@@ -1,13 +1,21 @@
 {
-  "buildCommand": "cd salary && npm install && npm run build",
-  "outputDirectory": "salary/dist",
-  "installCommand": "npm install --prefix ./salary",
-  "devCommand": "cd salary && npm run dev",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/backend/app.py" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "salary/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "salary/dist"
+      }
+    },
+    {
+      "src": "backend/app.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/backend/app.py" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
