@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "salary/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "npm run build",
+        "installCommand": "npm install"
+      }
+    },
+    {
+      "src": "backend/app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/app.py" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/salary/dist/$1" },
+    { "src": "/.*", "dest": "/salary/dist/index.html" }
+  ]
+}
