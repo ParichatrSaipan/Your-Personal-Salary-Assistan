@@ -2,6 +2,11 @@
 
 A full-stack web application that predicts salaries based on job characteristics using machine learning. This project is based on [data_analytics_project](https://github.com/ParichatrSaipan/data_analytics_project.git)
 
+## Demo
+
+![Demo Page 1](demo-page1.png)
+![Demo Page 2](demo-page2.png)
+
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
