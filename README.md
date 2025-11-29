@@ -1,6 +1,6 @@
 # Your Personal Salary Assistant WebApp
 
-A full-stack web application that predicts salaries based on job characteristics using machine learning. This project is based on [data_analytics_assignment](https://github.com/ParichatrSaipan/data_analytics_assignment.git)
+A full-stack web application that predicts salaries based on job characteristics using machine learning. This project is based on [data_analytics_project](https://github.com/ParichatrSaipan/data_analytics_project.git)
 
 ## Table of Contents
 
@@ -103,4 +103,4 @@ Your-Personal-Salary-Assistan/
 
 For detailed API documentation, see [backend/README.md](backend/README.md)
 
-For details on how to train the model, see [data_analytics_assignment](https://github.com/ParichatrSaipan/data_analytics_assignment.git)
+For details on how to train the model, see [data_analytics_project](https://github.com/ParichatrSaipan/data_analytics_project.git)
