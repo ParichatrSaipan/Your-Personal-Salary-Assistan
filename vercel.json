@@ -2,18 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "salary/package.json",
+      "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": { "outputDirectory": "build" }
     },
     {
-      "src": "backend/app.py",
+      "src": "api/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/backend/app.py" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/backend/(.*)",
+      "dest": "/backend/app.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/salary/$1"
+    }
   ]
 }
