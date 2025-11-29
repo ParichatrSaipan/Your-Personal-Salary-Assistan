@@ -5,7 +5,7 @@
       "src": "salary/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "salary/dist"
+        "distDir": "dist"
       }
     },
     {
