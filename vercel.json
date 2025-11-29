@@ -1,24 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "salary/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist",
-        "buildCommand": "npm run build",
-        "installCommand": "npm install"
-      }
-    },
-    {
-      "src": "backend/app.py",
-      "use": "@vercel/python"
+  "buildCommand": "cd salary && npm install && npm run build",
+  "outputDirectory": "salary/dist",
+  "installCommand": "npm install --prefix ./salary",
+  "devCommand": "cd salary && npm run dev",
+  "functions": {
+    "backend/app.py": {
+      "runtime": "python3.9"
     }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/backend/app.py" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/dist/$1" },
-    { "src": "/.*", "dest": "/dist/index.html" }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/backend/app.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
