@@ -46,7 +46,8 @@ export default function Start() {
 
     try {
       // Call the API
-      const response = await fetch('/api/predict', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://your-personal-salary-assistan-zyf1.vercel.app'
+      const response = await fetch(`${apiUrl}/api/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
